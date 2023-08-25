@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+def rootDir = project.rootDir.getAbsolutePath();
+group = 'ru.landsproject'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "papermc-repo"
+        url = "https://repo.papermc.io/repository/maven-public/"
+    }
+    maven {
+        name = "sonatype"
+        url = "https://oss.sonatype.org/content/groups/public/"
+    }
+    maven { url "https://repo.dmulloy2.net/repository/public/" }
+}
+
+dependencies {
+    implementation("com.j256.ormlite:ormlite-jdbc:6.1")
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    compileOnly "com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT"
+    compileOnly fileTree(dir: rootDir + '/libs/static/', include: ['*.jar'])
+
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.15.2'
+    implementation 'org.jetbrains:annotations:24.0.0'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.13.0'
+}
+
+compileJava {
+    sourceCompatibility =  JavaLanguageVersion.of(11)
+    targetCompatibility = JavaLanguageVersion.of(11)
+    options.encoding = "UTF-8"
+}

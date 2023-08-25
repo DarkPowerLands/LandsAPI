@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LandsAPI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LandsAPI_jar</output-path>
+    <root id="archive" name="LandsAPI.jar">
+      <element id="module-output" name="LandsAPI.main" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-jdbc/6.1/ef6752d1bb9d7443ccd24b2be7c72a42cfe00f98/ormlite-jdbc-6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/24.0.0/69b8b443c437fdeefa8d20c18d257b94836a92b9/annotations-24.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.13.0/b7263237aa89c1f99b327197c41d0669707a462e/commons-lang3-3.13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.15.2/a6fe1836469a69b3ff66037c324d75fc66ef137c/jackson-core-2.15.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
