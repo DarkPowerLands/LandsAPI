@@ -26,10 +26,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Getter
-@RequiredArgsConstructor(access = AccessLevel.PROTECTED)
 public abstract class AbstractDatabaseCredentials implements DatabaseCredentials {
 
     protected final @NotNull DatabaseType databaseType;
+
+    public AbstractDatabaseCredentials(@NotNull DatabaseType databaseType) {
+        this.databaseType = databaseType;
+    }
 
     @CredentialField(value = "params", optional = true)
     protected List<String> parameters;
@@ -132,9 +135,13 @@ public abstract class AbstractDatabaseCredentials implements DatabaseCredentials
         }
     }
 
-    @SneakyThrows(UnsupportedEncodingException.class)
+//    @SneakyThrows(UnsupportedEncodingException.class)
     private String urlEncode(String source) {
-        return URLEncoder.encode(source, "UTF-8");
+        try {
+            return URLEncoder.encode(source, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
