@@ -42,6 +42,15 @@ public class Configuration implements ConfigurationMap, Initable {
         });
     }
 
+    public void useDefaultColorful() {
+        setColorful(new Colorful() {
+            @Override
+            public String getColor(String text) {
+                return Messager.color(text);
+            }
+        });
+    }
+
     @Override
     public void init() {
         setConfiguration(getConfiguration(fileName));

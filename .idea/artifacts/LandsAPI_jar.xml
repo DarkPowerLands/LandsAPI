@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="jar" name="LandsAPI:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/LandsAPI_jar</output-path>
+    <output-path>$PROJECT_DIR$/build/libs</output-path>
     <root id="archive" name="LandsAPI.jar">
       <element id="module-output" name="LandsAPI.main" />
       <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.j256.ormlite/ormlite-jdbc/6.1/ef6752d1bb9d7443ccd24b2be7c72a42cfe00f98/ormlite-jdbc-6.1.jar" path-in-jar="/" />
